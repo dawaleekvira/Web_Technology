@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the calculator responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Vintage minimalist calculator built using HTML, CSS and JavaScript"
+    >
+
+    <title>Vintage Calculator</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="Style_5.css">
+</head>
+
+<body>
+
+    <!-- Main calculator application -->
+    <main class="calculator" aria-label="Calculator">
+
+        <!-- Calculator header -->
+        <header class="calculator__header">
+            <h1>CALCULATOR</h1>
+            <span class="calculator__model">ET-01</span>
+        </header>
+
+        <!--
+            Calculator display
+
+            The history display shows the previous operation.
+            The main display shows the current number.
+        -->
+        <section class="display" aria-label="Calculator display">
+
+            <!-- Current operation/history -->
+            <div
+                class="display__history"
+                id="historyDisplay"
+                aria-label="Calculation history"
+            >
+                &nbsp;
+            </div>
+
+            <!-- Current value -->
+            <output
+                class="display__value"
+                id="display"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+            >
+                0
+            </output>
+
+        </section>
+
+        <!-- Calculator keypad -->
+        <section class="keypad" aria-label="Calculator keypad">
+
+            <!-- Row 1 -->
+            <button
+                class="key key--clear"
+                type="button"
+                data-action="clear"
+                aria-label="Clear calculator"
+            >
+                C
+            </button>
+
+            <button
+                class="key key--function"
+                type="button"
+                data-action="sign"
+                aria-label="Toggle positive or negative"
+            >
+                ±
+            </button>
+
+            <button
+                class="key key--function"
+                type="button"
+                data-action="percent"
+                aria-label="Percentage"
+            >
+                %
+            </button>
+
+            <button
+                class="key key--operator"
+                type="button"
+                data-operation="/"
+                aria-label="Divide"
+            >
+                ÷
+            </button>
+
+
+            <!-- Row 2 -->
+            <button class="key" type="button" data-number="7">7</button>
+            <button class="key" type="button" data-number="8">8</button>
+            <button class="key" type="button" data-number="9">9</button>
+
+            <button
+                class="key key--operator"
+                type="button"
+                data-operation="*"
+                aria-label="Multiply"
+            >
+                ×
+            </button>
+
+
+            <!-- Row 3 -->
+            <button class="key" type="button" data-number="4">4</button>
+            <button class="key" type="button" data-number="5">5</button>
+            <button class="key" type="button" data-number="6">6</button>
+
+            <button
+                class="key key--operator"
+                type="button"
+                data-operation="-"
+                aria-label="Subtract"
+            >
+                −
+            </button>
+
+
+            <!-- Row 4 -->
+            <button class="key" type="button" data-number="1">1</button>
+            <button class="key" type="button" data-number="2">2</button>
+            <button class="key" type="button" data-number="3">3</button>
+
+            <button
+                class="key key--operator"
+                type="button"
+                data-operation="+"
+                aria-label="Add"
+            >
+                +
+            </button>
+
+
+            <!-- Row 5 -->
+            <button
+                class="key key--backspace"
+                type="button"
+                data-action="backspace"
+                aria-label="Backspace"
+            >
+                ⌫
+            </button>
+
+            <button class="key" type="button" data-number="0">0</button>
+
+            <button
+                class="key"
+                type="button"
+                data-action="decimal"
+                aria-label="Decimal point"
+            >
+                .
+            </button>
+
+            <button
+                class="key key--equals"
+                type="button"
+                data-action="equals"
+                aria-label="Calculate result"
+            >
+                =
+            </button>
+
+        </section>
+
+        <!-- Small footer -->
+        <footer class="calculator__footer">
+            <span>EKVIRA DAWALE</span>
+        </footer>
+
+    </main>
+
+    <!-- External JavaScript file -->
+    <script src="script_5.js"></script>
+</body>
+</html>
