@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style_MSPA.css">
+  <script src="script_MSPA.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon">✦</span>
+      <div>
+        <h1>TaskNest</h1>
+        <p>Student Task Manager</p>
+      </div>
+    </div>
+    <span class="student-tag">🎓 Student Space</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+        <h2>Make today count! </h2>
+        <p>Organize your tasks and stay on track.</p>
+      </div>
+      <div class="welcome-icon">📚</div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card lavender">
+        <span>📋 Total Tasks</span>
+        <strong id="totalCount">0</strong>
+      </article>
+      <article class="stat-card green">
+        <span>✅ Completed</span>
+        <strong id="completedCount">0</strong>
+      </article>
+      <article class="stat-card peach">
+        <span>⏳ Pending</span>
+        <strong id="pendingCount">0</strong>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h3>✍️ Add a New Task</h3>
+      <form id="taskForm" class="task-form">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="e.g. Complete Java assignment"
+          maxlength="150"
+          aria-label="Enter a new task"
+          required
+        >
+        <button type="submit" class="primary-btn">+ Add Task</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h3>📝 My Tasks</h3>
+          <p>Small steps lead to big achievements.</p>
+        </div>
+       
+      </div>
+
+      <div class="filters" aria-label="Filter tasks">
+        <button class="filter-btn active" data-filter="all">All Tasks</button>
+        <button class="filter-btn" data-filter="pending">⏳ Pending</button>
+        <button class="filter-btn" data-filter="completed">✓ Completed</button>
+      </div>
+
+      <p id="statusMessage" class="status-message" role="status"></p>
+      <div id="taskList" class="task-list"></div>
+
+      <div class="task-footer">
+        <span id="taskSummary">0 tasks shown</span>
+        <span>Keep going! 🌟</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
